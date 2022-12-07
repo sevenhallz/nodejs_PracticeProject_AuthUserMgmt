@@ -12,6 +12,7 @@ var friends = {
 // GET request: Retrieve all friends
 router.get("/",(req,res)=>{
     res.send(JSON.stringify(friends,null,4));
+
 });
 
 // GET by specific ID request: Retrieve a single friend with email ID
@@ -65,4 +66,5 @@ router.delete("/:email", (req, res) => {
     }
     res.send(`Friend with the email  ${email} deleted.`);
   });
+  
 module.exports=router;
